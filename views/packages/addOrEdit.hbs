@@ -1,0 +1,64 @@
+<h3>{{viewTitle}}</h3>
+
+<form class='container' method="post" action="/packages">
+        <input type="hidden" name="_id" value="{{packages.id}}">
+        <div class='p-3 mb-2 bg-secondary text-white'>
+            <h1 class="text-center">Welcome to LetsGo Database</h1>
+            <div class="input-group mb-3">
+            <span class="input-group-text">Package ID:</span>
+            <input type="text" class="form-control" aria-label="pkgid" name="pkgid" value="{{packages.PackageId}}">
+            </div>
+
+            <div class="input-group mb-3">
+            <span class="input-group-text">Package Name:</span>
+            <input type="text" class="form-control" placeholder="eg:Europe Adventure" name='pkgname' aria-label="pkgtitle" value="{{packages.PkgName}}">
+            </div>
+            
+            <div class="input-group mb-3">
+            <span class="input-group-text">Start Date:</span>
+            <input type="date" class="form-control" name="pkgstartdate" aria-label="pkgstartdate" value="{{packages.PkgStartDate}}">
+            </div>
+
+            <div class="input-group mb-3">
+            <span class="input-group-text">End Date:</span>
+            <input type="date" class="form-control" name="pkgenddate" aria-label="pkgenddate" value="{{packages.PkgEndDate}}">
+            </div>
+            
+            <div class="input-group mb-3">
+            <span class="input-group-text">Description</span>
+            <textarea class="form-control" name="pkgdesc" aria-label="With textarea" value="{{packages.PkgDesc}}">{{packages.PkgDesc}}</textarea>
+            </div>
+            
+            <div class="input-group mb-3">
+                <span class="input-group-text">Package Price($):</span>
+                <input type="text" class="form-control" name ="pkgprice" aria-label="Amount (to the nearest dollar)" value="{{packages.PkgBasePrice}}">
+                <span class="input-group-text">.00</span>
+            </div>
+           
+            <div class="input-group mb-3">
+                <span class="input-group-text">Commission($):</span>
+                <input type="text" class="form-control" name="pkgcommission" aria-label="Amount (to the nearest dollar)" value="{{packages.PkgAgencyCommission}}">
+                <span class="input-group-text">.00</span>
+            </div>
+
+            <div class="input-group mb-3">
+            <input type="file" class="form-control" id="image" name="pkgimg">
+            <label class="input-group-text" for="image">Image Upload</label>
+            </div>
+            
+         
+            <div class="form-group">
+                <button class="btn btn-info" type="submit"><i class="fa fa-database"></i>Add to Database</button>    
+                <a class="btn btn-secondary" href="/packages/list"><i class="fa fa-list-alt"></i> View All</a>
+
+            </div>
+
+            
+                   
+                    
+                   
+                   
+            
+        </div>
+</form>
+       
